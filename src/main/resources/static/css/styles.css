@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+  --bg-color: #b3aba9;
+  --container-bg-color: #e2d8d5;
+}
+
+* {  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-color);
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--container-bg-color);
+  border: 3px solid black;
+  border-radius: 2em;
+  padding: 1em 2em;
+}
+
+.container > h1 {
+  font-size: 2em;
+  padding: 0.5em 1em;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.links {
+  padding: 0.5em 1em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  padding: 0.5em 1em;
+  margin: 0 0.5em;
+  border-radius: 5px;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+.link:hover {
+  background-color: #0056b3;
+}
+
+.link:active {
+  background-color: #003d80;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #555;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em;
+  padding: 0.5em;
+  font-size: 1.2em;
+}
+
+th, td {
+  border: 1px solid;
+  padding: 0.5em 0.7em;
+  text-align: left;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 1em;
+}
+
+input {
+  font-size: 1.2em;
+  padding: 0.5em 0.2em 0.2em;
+}
+
+input,
+textarea,
+select {
+  margin-bottom: 1em;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Alunos Cadastrados</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+  <section class="container">
+    <h1>Lista de Alunos</h1>
+    <table>
+      <thead>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Matrícula</th>
+        <th>Curso</th>
+      </thead>
+      <tbody>
+        <tr th:each="aluno : ${alunos}">
+          <td th:text="${aluno.nome}">Nome</td>
+          <td th:text="${aluno.email}">Email</td>
+          <td th:text="${aluno.matricula}">Matricula</td>
+          <td th:text="${aluno.curso.nome}">Curso</td>
+        </tr>
+      </tbody>
+      
+    </table>
+    <div class="links">
+      <a class="link" th:href="@{alunos/novo}">Novo</a>
+      <a class="link" th:href="@{/}">Voltar</a>
+    </div>
+    
+  </section>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Curso</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+  <section class="container">
+    <h1 class="title">Cadastro de Curso</h1>
+
+    <form th:action="@{/cursos/salvar}" th:object="${curso}" method="post">
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" id="nome" th:field="*{nome}" required>
+
+      <label for="cargaHoraria">Carga Horária: </label>
+      <input type="number" name="cargaHoraria" id="cargaHoraria" th:field="*{cargaHoraria}" required>
+
+      <label for="descricao">Descrição:</label>
+      <textarea name="descricao" id="descricao" th:field="*{descricao}"></textarea>
+      <div class="links">
+        <button class="link" type="submit">Cadastrar</button>
+        <a th:href="@{/}" class="link">Voltar</a>
+      </div>      
+    </form>
+  </section>
+</body>
+</html>
