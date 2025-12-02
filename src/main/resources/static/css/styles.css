@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 :root {
-  --bg-color: #919191;
-  --container-bg-color: #dbdbdb;
+  --bg-color: #2c3e50;
+  --container-bg-color: #395068;
 }
 
 * {  
@@ -33,6 +33,7 @@ body {
 .container > h1 {
   font-size: 2em;
   padding: 0.5em 1em;
+  color: #ecf0f1;
 }
 
 .options-container {
@@ -51,6 +52,7 @@ body {
 
 .link {
   text-decoration: none;
+  border: none;
   color: white;
   background-color: #007bff;
   padding: 0.5em 1em;
@@ -70,22 +72,53 @@ body {
 
 .subtitle {
   font-size: 1.2em;
-  color: #555;
+  color: #bdc3c7;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1em;
-  padding: 0.5em;
-  font-size: 1.2em;
-  overflow-y: scroll;
+  margin: 1.5em 0;
+  font-size: 1em; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  background-color: white; 
+  border-radius: 8px; 
+  overflow: hidden; 
 }
 
 th, td {
-  border: 1px solid;
-  padding: 0.5em 0.7em;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  padding: 1em 1em;
   text-align: left;
+}
+
+th{
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+td{
+  font-weight: 500;
+}
+
+tbody td:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+
+tbody td:hover {
+  background-color: #e9ecef;
+  cursor: default;
+  transition: ease-in-out .4s;
+}
+
+thead{
+  background-color: #007bff;
+  color: white;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
 }
 
 form {
@@ -105,6 +138,8 @@ input {
 
 label{
   margin-bottom: 1vh;
+  color: white;
+  font-weight: 500;
 }
 
 input,
@@ -112,6 +147,7 @@ textarea,
 select {
   margin-bottom: 1em;
 }
+
 select {
   padding: 10px;
   font-size: 1em;
